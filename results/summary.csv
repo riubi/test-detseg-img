@@ -1,0 +1,7 @@
+experiment,params,images,time_s,objects,per_image,score_mean,stability
+"1: yolo11, original","conf>=0.05, agnostic NMS 0.5, input 1024 (long side), mps",66,0.116,753,11.4,0.168,
+"2: yolo11, augmented","conf>=0.05, agnostic NMS 0.5, input 1024 (long side), mps",528,0.112,5492,10.4,0.176,"matched 0.72, IoU 0.94"
+"3: faster_rcnn, original","conf>=0.05, agnostic NMS 0.5, input 800 (short side), mps",66,0.468,538,8.2,0.316,
+"4: faster_rcnn, augmented","conf>=0.05, agnostic NMS 0.5, input 800 (short side), mps",528,0.473,3979,7.5,0.308,"matched 0.68, IoU 0.90"
+seg: grabcut,"faster_rcnn boxes, score>=0.2, margin 0.15, 5 iters, cpu",9,4.529,54,6.0,,"area/box 0.57, multi-part 0.06, inst overlap 0.124"
+seg: sam2,"faster_rcnn boxes, score>=0.2, sam2.1_b, mps",9,0.953,54,6.0,,"area/box 0.62, multi-part 0.00, inst overlap 0.136"
